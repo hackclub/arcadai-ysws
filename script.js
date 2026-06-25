@@ -101,11 +101,11 @@ window.addEventListener('resize', () => {
 
 // ── MUSIC PLAYER WITH AUTOMATIC RETRO MATRIX VISUALIZER ──
 const playlist = [
-    { file: 'slimeyfox-arcade-80s-era-481352 (2).mp3', name: 'Arcade (80s Era)' },
-    { file: 'enemy_instrumental.mp3', name: 'Enemy (Instrumental)' },
-    { file: 'interstellar_ringtone (1).mp3', name: 'Interstellar' },
-    { file: 'NO BATIDO.mp3', name: 'No Batido' },
-    { file: 'jhol_mixed_version.mp3', name: 'Jhol (Mixed)' }
+    { file: 'assets/music/slimeyfox-arcade-80s-era-481352 (2).mp3', name: 'Arcade (80s Era)' },
+    { file: 'assets/music/enemy_instrumental.mp3', name: 'Enemy (Instrumental)' },
+    { file: 'assets/music/interstellar_ringtone (1).mp3', name: 'Interstellar' },
+    { file: 'assets/music/NO BATIDO.mp3', name: 'No Batido' },
+    { file: 'assets/music/jhol_mixed_version.mp3', name: 'Jhol (Mixed)' }
 ];
 
 let currentTrack = 0;
