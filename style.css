@@ -2487,261 +2487,246 @@ body {
         0 0 25px rgba(255,230,0,.6);
 }
 
-/* --- THE HARDWARE CHASSIS --- */
-.handheld-console {
-    position: relative;
-    width: 100%;
-    max-width: 840px; 
-    background: #1e2127;
-    border-radius: 28px;
-    padding: 6px; 
-    
-    /* Removed gradient frame, updated to a solid bright neon red */
-    background-color: #ff2a2a;
-    
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.8),
-        0 0 25px rgba(255, 42, 42, 0.25);
-    margin: 0 auto;
-    box-sizing: border-box;
+/* READY SCREEN */
+
+#readyScreen{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0b0914;
+    z-index:99999;
+    padding:20px;
 }
 
-/* Inner shell layout structure */
-.console-inner-shell {
-    background: linear-gradient(180deg, #252930 0%, #15171c 100%);
-    border-radius: 24px;
-    padding: 30px 25px;
-    display: grid;
-    grid-template-columns: 120px 1fr 120px; 
-    align-items: center;
-    gap: 20px;
-    box-shadow: inset 0 4px 10px rgba(0,0,0,0.5);
+/* FRAME */
+
+.deck-hardware-frame{
+    position:relative;
+    width:100%;
+    max-width:860px;
+    margin:auto;
 }
 
-/* --- CONTROLLER DOCKS (Left & Right) --- */
-.left-controls, .right-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 260px; 
-    padding: 10px 0;
-    box-sizing: border-box;
+.deck-svg-graphic{
+    width:100%;
+    display:block;
+    pointer-events:none;
 }
 
-/* Thumbstick Components */
-.thumbstick {
-    width: 46px;
-    height: 46px;
-    background: radial-gradient(circle at 15px 15px, #4e5566 0%, #16181d 80%);
-    border-radius: 50%;
-    border: 3px solid #0a0b0d;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.1);
-    position: relative;
-}
-.thumbstick::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: #1d212a;
-    border-radius: 50%;
-    top: 8px; left: 8px;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
-    border: 1px solid #2d323d;
+.deck-screen-viewport{
+    position:absolute;
+    top:14%;
+    left:20.5%;
+    width:64%;
+    height:71%;
+
+    background:
+        radial-gradient(circle,#141226 0%,#050409 100%);
+
+    border-radius:12px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px 20px;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+    box-shadow:
+        inset 0 0 45px rgba(0,0,0,.95);
+
+    border:1px solid rgba(255,255,255,.04);
 }
 
-/* D-Pad Component */
-.dpad {
-    position: relative;
-    width: 60px;
-    height: 60px;
-}
-.dpad-horizontal, .dpad-vertical {
-    position: absolute;
-    background: #13151a;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    border: 1px solid #242830;
-}
-.dpad-horizontal {
-    width: 60px;
-    height: 20px;
-    top: 20px; left: 0;
-}
-.dpad-vertical {
-    width: 20px;
-    height: 60px;
-    top: 0; left: 20px;
+.deck-screen-viewport::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            rgba(18,16,16,0) 50%,
+            rgba(0,0,0,.35) 50%
+        );
+
+    background-size:100% 3px;
+
+    pointer-events:none;
 }
 
-/* Action Buttons Grid */
-.action-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 22px);
-    grid-template-rows: repeat(3, 22px);
-    gap: 6px;
-    justify-content: center;
-}
-.btn-abxy {
-    width: 22px;
-    height: 22px;
-    background: #1c1f26;
-    color: #8f9cae;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 0.7rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #0a0b0d;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
-}
-.btn-abxy.top    { grid-column: 2; grid-row: 1; }
-.btn-abxy.left   { grid-column: 1; grid-row: 2; }
-.btn-abxy.right  { grid-column: 3; grid-row: 2; }
-.btn-abxy.bottom { grid-column: 2; grid-row: 3; }
+.arcadai-brand{
 
-/* Menu Toggles */
-.system-toggles {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-}
-.sys-button {
-    width: 14px;
-    height: 14px;
-    background: #13151a;
-    border-radius: 50%;
-    border: 1px solid #2d323d;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    font-family:'Press Start 2P';
+
+    font-size:.8rem;
+
+    color:#5d6678;
+
+    letter-spacing:5px;
+
+    margin-top:5px;
+
+    z-index:2;
 }
 
-/* --- THE CENTER DISPLAY ASSEMBLY --- */
-.console-screen-bezel {
-    position: relative;
-    background: #0d0e12;
-    border-radius: 14px;
-    padding: 18px;
-    box-shadow: inset 0 4px 12px rgba(0,0,0,0.85);
-    border: 2px solid #20242d;
+.brand-highlight{
+
+    color:#00ffd0;
+
+    text-shadow:
+        0 0 10px #00ffd0,
+        0 0 20px rgba(0,255,208,.5);
+
 }
 
-/* Flag moved safely inside the dark screen assembly wrapper */
-.hc-flag-internal {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 55px;
-    z-index: 5;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+.hc-flag-internal{
+
+    position:absolute;
+
+    top:16px;
+
+    right:18px;
+
+    width:42px;
+
+    z-index:5;
+
 }
 
-/* Branding with Illuminating AI Effect */
-.arcadai-brand {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 900;
-    color: #555c70;
-    font-size: 1.15rem;
-    letter-spacing: 5px;
-    text-align: center;
-    margin-bottom: 14px;
-    text-shadow: 0 -1px 0 #000;
+.text-group{
+
+    margin:auto 0;
+
+    text-align:center;
+
+    z-index:2;
+
 }
 
-.arcadai-brand .brand-highlight {
-    color: #00ffff;
-    text-shadow: 
-        0 0 6px #00ffff, 
-        0 0 12px rgba(0, 255, 255, 0.8), 
-        0 0 20px rgba(0, 255, 255, 0.4);
+.pixel-title{
+
+    font-family:'Press Start 2P';
+
+    font-size:clamp(.95rem,2vw,1.45rem);
+
+    line-height:1.6;
+
+    color:white;
+
+    margin-bottom:10px;
+
 }
 
-/* THE CRT SCREEN */
-.live-screen {
-    position: relative;
-    background: radial-gradient(circle, #1a132b 0%, #07040d 100%);
-    border-radius: 6px;
-    padding: 55px 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    border: 3px solid #050507;
+.glow-text{
+
+    color:#00ffff;
+
+    text-shadow:
+        0 0 10px cyan,
+        0 0 20px rgba(0,255,255,.4);
+
 }
 
-/* CRT Overlay lines */
-.live-screen::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
-    z-index: 2;
-    background-size: 100% 4px;
-    pointer-events: none;
+.sub-text{
+
+    font-family:'Press Start 2P';
+
+    color:#ff00ff;
+
+    font-size:.7rem;
+
+    margin-bottom:18px;
+
+    text-shadow:0 0 8px #ff00ff;
+
 }
 
-/* Text & Button Interface */
-.pixel-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 900;
-    color: #ffffff;
-    font-size: clamp(1.5rem, 4.5vw, 2.3rem);
-    margin: 0 0 6px 0;
-    line-height: 1.2;
-    letter-spacing: 1px;
+.click-prompt{
+
+    font-family:'Press Start 2P';
+
+    font-size:.55rem;
+
+    color:#00ffff;
+
+    opacity:.85;
+
+    animation:pulseText 2s infinite;
+
 }
 
-.glow-text {
-    color: #00ffff;
-    text-shadow: 0 0 8px rgba(0, 255, 255, 0.9), 0 0 20px rgba(0, 255, 255, 0.4);
+.start-btn{
+
+    font-family:'Press Start 2P';
+
+    font-size:.8rem;
+
+    background:#ffcc00;
+
+    color:black;
+
+    border:3px solid black;
+
+    padding:12px 38px;
+
+    cursor:pointer;
+
+    box-shadow:4px 4px 0 #735c00;
+
+    transition:.08s;
+
 }
 
-.sub-text {
-    font-family: 'Courier New', Courier, monospace;
-    color: #ff00ff;
-    font-size: clamp(0.75rem, 2.5vw, 1rem);
-    font-weight: bold;
-    margin: 0 0 30px 0;
-    text-shadow: 0 0 6px rgba(255, 0, 255, 0.6);
-    letter-spacing: 2px;
+.start-btn:hover{
+
+    background:#ffe16d;
+
 }
 
-.start-btn {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    background-color: #ffcc00;
-    color: #000;
-    border: none;
-    padding: 12px 55px;
-    margin-bottom: 30px;
-    box-shadow: 4px 4px 0px #806600, inset -2px -2px 0px #b38f00;
-    cursor: pointer;
-    z-index: 3;
-    position: relative;
-    transition: transform 0.05s, box-shadow 0.05s;
+.start-btn:active{
+
+    transform:translate(3px,3px);
+
+    box-shadow:1px 1px 0 #735c00;
+
 }
 
-.start-btn:hover {
-    background-color: #ffe066;
+.sponsor-text{
+
+    font-family:'DM Sans';
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    font-size:.65rem;
+
+    color:#4a465c;
+
 }
 
-.start-btn:active {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #806600;
-}
+@keyframes pulseText{
 
-.sponsor-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: clamp(0.65rem, 1.8vw, 0.8rem);
-    color: #615b7a;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
+    0%,100%{
+
+        opacity:.5;
+
+        transform:scale(.97);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.03);
+
+    }
+
 }
