@@ -2880,3 +2880,15 @@ body {
 
 }
 
+
+.deck-screen-viewport{
+    top: 14%;
+    left: 27%;
+    width: 46%;
+    height: 69%;
+}
+
+
+.deck-hardware-frame{
+    max-width: 980px;
+}
