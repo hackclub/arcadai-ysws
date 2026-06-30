@@ -3054,3 +3054,14 @@ body {
         0 0 18px rgba(0,255,255,.05);
 }
 
+
+/* ── HYPED EMULATOR SPLIT SECTION STYLE ADDITIONS ── */
+@keyframes bounceArrow {
+    0% { transform: translateY(-2px); }
+    100% { transform: translateY(6px); }
+}
+
+@keyframes floatTrophy {
+    0% { transform: translateY(-4px) rotate(-3deg); }
+    100% { transform: translateY(4px) rotate(3deg); }
+}
