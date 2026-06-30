@@ -103,46 +103,223 @@
         <div class="hero-3d">
             <canvas id="controller-canvas"></canvas>
         </div>
-<section class="live-arcade-cabinet" style="padding: 60px 20px; text-align: center; background: rgba(10, 5, 20, 0.7); border-top: 4px solid #E4FF30; border-bottom: 4px solid #E4FF30;">
-
-    <div class="cabinet-outer" style="max-width: 420px; margin: 0 auto; background: #fcd46c; border: 6px solid #000; border-radius: 16px; box-shadow: 12px 12px 0px rgba(0,0,0,0.3); padding: 24px 20px 20px 20px; position: relative;">
-        
-        <div style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); background: #ff6074; color: white; font-family: 'Press Start 2P'; font-size: 10px; padding: 8px 16px; border: 4px solid #000; box-shadow: 4px 4px 0 #000; white-space: nowrap; z-index: 10;">
-            PLAYABLE GAME!
-        </div>
-        
-        <div style="font-size: 28px; color: #000; margin-top: -10px; margin-bottom: 5px; animation: bounceArrow 1s infinite alternate;">⬇</div>
-
-        <div class="cabinet-monitor" style="background: #181c34; border: 6px solid #000; border-radius: 8px; padding: 12px; box-shadow: inset 0 0 20px rgba(0,0,0,0.85);">
+<section class="split-arcade-section" style="padding: 60px 20px; background: rgba(10, 5, 20, 0.7); border-top: 4px solid #E4FF30; border-bottom: 4px solid #E4FF30;">
+    
+    <div class="hype-header" style="margin-bottom: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <img src="https://cdn.hackclub.com/019f19d4-c5c6-7a98-9739-62cc808fcc87/untitled257_20260630224540.png" 
+                 alt="Trophy" 
+                 style="height: 55px; width: auto; filter: drop-shadow(0 0 10px #E4FF30); animation: floatTrophy 2s ease-in-out infinite alternate;">
             
-            <div style="display: flex; justify-content: space-between; font-family: 'Press Start 2P'; font-size: 8px; color: #fcd46c; margin-bottom: 8px; padding: 0 4px;">
-                <span>arcade mode</span>
-                <span id="cabinetGameName" style="color: #ff6074;">SPACE INVADERS</span>
-            </div>
-
-            <div class="screen-viewport" style="position: relative; background: #000; aspect-ratio: 4/5; width: 100%; border: 4px solid #000; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                <canvas id="miniGameCanvas" width="360" height="450" style="display: block; background: #0b0d19; cursor: none;"></canvas>
-            </div>
-        </div>
-
-        <div class="control-deck" style="background: #28242c; border: 6px solid #000; border-radius: 8px; margin-top: 16px; padding: 16px 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: inset 0 -4px 0 rgba(0,0,0,0.4);">
+            <h2 style="font-family: 'Press Start 2P', monospace; font-size: 18px; color: #E4FF30; text-shadow: 0 0 8px rgba(228, 255, 48, 0.6); margin: 0; max-width: 500px; line-height: 1.4;">
+                BEST SUBMISSION OF THE WEEK WINNER!
+            </h2>
             
-            <div style="width: 50px; height: 50px; background: #1a181c; border: 3px solid #000; border-radius: 4px; display: flex; justify-content: center; padding-top: 6px;">
-                <div style="width: 6px; height: 16px; background: #ff6074; border-radius: 1px; box-shadow: 0 0 8px #ff6074;"></div>
-            </div>
+            <img src="https://cdn.hackclub.com/019f19d4-c5c6-7a98-9739-62cc808fcc87/untitled257_20260630224540.png" 
+                 alt="Trophy" 
+                 style="height: 55px; width: auto; filter: drop-shadow(0 0 10px #E4FF30); animation: floatTrophy 2s ease-in-out infinite alternate; transform: scaleX(-1);">
+        </div>
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 900; font-size: 15px; color: #fff; letter-spacing: 1px; margin: 8px 0 0 0;">
+            🔥 THE WINNER GETS SHIPPED WITH AN EXCLUSIVE STICKER! 🔥
+        </p>
+    </div>
 
-            <div style="text-align: center; color: #fff; font-family: 'Press Start 2P'; font-size: 7px; line-height: 1.4;">
-                MOVE MOUSE TO AIM<br>CLICK TO FIRE LASERS
-            </div>
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;">
+        
+        <div style="flex: 1; min-width: 320px; max-width: 440px;">
+            <div class="cabinet-outer" style="background: #fcd46c; border: 6px solid #000; border-radius: 16px; box-shadow: 12px 12px 0px rgba(0,0,0,0.3); padding: 24px 20px 20px 20px; position: relative;">
+                
+                <div style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: #ff6074; color: white; font-family: 'Press Start 2P'; font-size: 10px; padding: 6px 16px; border: 4px solid #000; box-shadow: 4px 4px 0 #000; white-space: nowrap; z-index: 10;">
+                    PLAY NOW!
+                </div>
+                
+                <div style="font-size: 28px; color: #000; text-align: center; margin-top: 5px; margin-bottom: 5px; animation: bounceArrow 0.5s infinite alternate;">⬇</div>
 
-            <div style="display: flex; gap: 6px; align-items: center;">
-                <div style="width: 18px; height: 18px; background: #ff6074; border: 3px solid #000; border-radius: 4px; box-shadow: 0 2px 0 #000;"></div>
-                <div style="width: 18px; height: 18px; background: #fcd46c; border: 3px solid #000; border-radius: 4px; box-shadow: 0 2px 0 #000;"></div>
+                <div class="cabinet-monitor" style="background: #181c34; border: 6px solid #000; border-radius: 8px; padding: 12px; box-shadow: inset 0 0 20px rgba(0,0,0,0.85);">
+                    <div style="display: flex; justify-content: space-between; font-family: 'Press Start 2P'; font-size: 8px; color: #fcd46c; margin-bottom: 8px; padding: 0 4px;">
+                        <span>arcade mode</span>
+                        <span style="color: #ff6074;">LIVE EMULATOR</span>
+                    </div>
+
+                    <div class="screen-viewport" style="position: relative; background: #000; aspect-ratio: 4/5; width: 100%; border: 4px solid #000; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <canvas id="miniGameCanvas" width="360" height="450" style="display: block; background: #0b0d19; width: 100%; height: auto; cursor: crosshair;"></canvas>
+                    </div>
+                </div>
+
+                <div class="control-deck" style="background: #28242c; border: 6px solid #000; border-radius: 8px; margin-top: 16px; padding: 16px 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: inset 0 -4px 0 rgba(0,0,0,0.4);">
+                    <div style="width: 50px; height: 50px; background: #1a181c; border: 3px solid #000; border-radius: 4px; display: flex; justify-content: center; padding-top: 6px;">
+                        <div style="width: 6px; height: 16px; background: #ff6074; border-radius: 1px; box-shadow: 0 0 8px #ff6074;"></div>
+                    </div>
+                    <div style="text-align: center; color: #fff; font-family: 'Press Start 2P'; font-size: 7px; line-height: 1.4;">
+                        MOVE MOUSE TO AIM<br>CLICK TO FIRE LASERS
+                    </div>
+                    <div style="display: flex; gap: 6px; align-items: center;">
+                        <div style="width: 18px; height: 18px; background: #ff6074; border: 3px solid #000; border-radius: 4px; box-shadow: 0 2px 0 #000;"></div>
+                        <div style="width: 18px; height: 18px; background: #fcd46c; border: 3px solid #000; border-radius: 4px; box-shadow: 0 2px 0 #000;"></div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div style="flex: 1.2; min-width: 320px; color: #fff; font-family: 'DM Sans', sans-serif;">
+            <div style="background: rgba(255, 255, 255, 0.03); border: 2px dashed rgba(228, 255, 48, 0.3); border-radius: 12px; padding: 30px;">
+                <span style="font-family: 'Press Start 2P'; font-size: 9px; background: rgba(228, 255, 48, 0.15); color: #E4FF30; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px;">
+                    USING AI?
+                </span>
+                <h3 style="font-family: 'DM Sans', sans-serif; font-weight: 900; font-size: 32px; margin: 0 0 15px 0; color: #fff;">
+                    Why Are We Using AI?
+                </h3>
+                <p style="font-size: 15px; line-height: 1.7; color: #ccc; margin-bottom: 25px;">
+                    Games can take weeks to build from scratch. And AI is a great tool to learn if used in the right way. So for ArcadeAi, we want to encourage participants to use AI to build the first version of their game, then improve it with their own ideas and creativity. AI helps you learn in this and makes the process a bit faster so you can focus on experimenting, creating, and making something uniquely yours (aka your own first game).
+                </p>
+                <div style="font-family: 'Press Start 2P', monospace; font-size: 11px; line-height: 1.6; color: #E4FF30; border-left: 4px solid #ff6074; padding-left: 15px;">
+                    AI Helps you Build the first version.<br>
+                    <span style="color: #fff;">You build the final game.</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.getElementById('miniGameCanvas');
+        if(!canvas) return;
+        const ctx = canvas.getContext('2d');
+        
+        let player = { x: canvas.width / 2, y: canvas.height - 40 };
+        let lasers = [];
+        let invaders = [];
+        let particles = [];
+        let score = 0;
+        let mouseX = canvas.width / 2;
+        
+        function spawnInvaders() {
+            invaders = [];
+            for (let row = 0; row < 4; row++) {
+                for (let col = 0; col < 6; col++) {
+                    invaders.push({
+                        x: 45 + col * 48,
+                        y: 60 + row * 35,
+                        w: 24,
+                        h: 18,
+                        alive: true,
+                        color: row === 0 ? '#00ffff' : row === 1 ? '#a855f7' : row === 2 ? '#ff6074' : '#E4FF30'
+                    });
+                }
+            }
+        }
+
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            player.x = Math.max(20, Math.min(canvas.width - 20, mouseX));
+        });
+
+        canvas.addEventListener('click', () => {
+            lasers.push({ x: player.x, y: player.y - 12, speed: 9 });
+        });
+
+        function createExplosion(x, y, color) {
+            for(let i=0; i<6; i++) {
+                particles.push({
+                    x, y,
+                    vx: (Math.random() - 0.5) * 4,
+                    vy: (Math.random() - 0.5) * 4,
+                    alpha: 1,
+                    color
+                });
+            }
+        }
+
+        function update() {
+            lasers.forEach((l, index) => {
+                l.y -= l.speed;
+                if (l.y < 0) lasers.splice(index, 1);
+            });
+
+            particles.forEach((p, index) => {
+                p.x += p.vx;
+                p.y += p.vy;
+                p.alpha -= 0.05;
+                if(p.alpha <= 0) particles.splice(index, 1);
+            });
+
+            lasers.forEach((l, lIdx) => {
+                invaders.forEach((inv) => {
+                    if (inv.alive && l.x > inv.x && l.x < inv.x + inv.w && l.y > inv.y && l.y < inv.y + inv.h) {
+                        inv.alive = false;
+                        lasers.splice(lIdx, 1);
+                        score += 10;
+                        createExplosion(inv.x + inv.w/2, inv.y + inv.h/2, inv.color);
+                    }
+                });
+            });
+
+            if (invaders.length > 0 && invaders.every(i => !i.alive)) {
+                spawnInvaders();
+            }
+        }
+
+        function draw() {
+            ctx.fillStyle = '#0b0d19';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.strokeStyle = 'rgba(228, 255, 48, 0.1)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(player.x, 0);
+            ctx.lineTo(player.x, canvas.height);
+            ctx.stroke();
+
+            // Ship
+            ctx.fillStyle = '#E4FF30';
+            ctx.beginPath();
+            ctx.moveTo(player.x, player.y - 10);
+            ctx.lineTo(player.x - 12, player.y + 10);
+            ctx.lineTo(player.x + 12, player.y + 10);
+            ctx.closePath();
+            ctx.fill();
+
+            // Lasers
+            ctx.fillStyle = '#ff6074';
+            lasers.forEach(l => ctx.fillRect(l.x - 1.5, l.y, 3, 9));
+
+            // Invaders
+            invaders.forEach(inv => {
+                if (!inv.alive) return;
+                ctx.fillStyle = inv.color;
+                ctx.fillRect(inv.x, inv.y, inv.w, inv.h);
+                ctx.fillStyle = '#0b0d19';
+                ctx.fillRect(inv.x + 4, inv.y + 5, 3, 3);
+                ctx.fillRect(inv.x + 16, inv.y + 5, 3, 3);
+            });
+
+            // Explosions
+            particles.forEach(p => {
+                ctx.fillStyle = p.color;
+                ctx.globalAlpha = p.alpha;
+                ctx.fillRect(p.x, p.y, 2, 2);
+            });
+            ctx.globalAlpha = 1.0;
+
+            // Score
+            ctx.fillStyle = '#fff';
+            ctx.font = '8px "Press Start 2P"';
+            ctx.fillText(`SCORE: ${score}`, 12, 25);
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        spawnInvaders();
+        gameLoop();
+    });
+</script>
 <style>
     @keyframes bounceArrow {
         0% { transform: translateY(-2px); }
