@@ -2487,3 +2487,261 @@ body {
         0 0 25px rgba(255,230,0,.6);
 }
 
+/* --- THE HARDWARE CHASSIS --- */
+.handheld-console {
+    position: relative;
+    width: 100%;
+    max-width: 840px; 
+    background: #1e2127;
+    border-radius: 28px;
+    padding: 6px; 
+    
+    /* Removed gradient frame, updated to a solid bright neon red */
+    background-color: #ff2a2a;
+    
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(255, 42, 42, 0.25);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Inner shell layout structure */
+.console-inner-shell {
+    background: linear-gradient(180deg, #252930 0%, #15171c 100%);
+    border-radius: 24px;
+    padding: 30px 25px;
+    display: grid;
+    grid-template-columns: 120px 1fr 120px; 
+    align-items: center;
+    gap: 20px;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* --- CONTROLLER DOCKS (Left & Right) --- */
+.left-controls, .right-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 260px; 
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Thumbstick Components */
+.thumbstick {
+    width: 46px;
+    height: 46px;
+    background: radial-gradient(circle at 15px 15px, #4e5566 0%, #16181d 80%);
+    border-radius: 50%;
+    border: 3px solid #0a0b0d;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.1);
+    position: relative;
+}
+.thumbstick::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #1d212a;
+    border-radius: 50%;
+    top: 8px; left: 8px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+    border: 1px solid #2d323d;
+}
+
+/* D-Pad Component */
+.dpad {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+.dpad-horizontal, .dpad-vertical {
+    position: absolute;
+    background: #13151a;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    border: 1px solid #242830;
+}
+.dpad-horizontal {
+    width: 60px;
+    height: 20px;
+    top: 20px; left: 0;
+}
+.dpad-vertical {
+    width: 20px;
+    height: 60px;
+    top: 0; left: 20px;
+}
+
+/* Action Buttons Grid */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 22px);
+    grid-template-rows: repeat(3, 22px);
+    gap: 6px;
+    justify-content: center;
+}
+.btn-abxy {
+    width: 22px;
+    height: 22px;
+    background: #1c1f26;
+    color: #8f9cae;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0a0b0d;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+.btn-abxy.top    { grid-column: 2; grid-row: 1; }
+.btn-abxy.left   { grid-column: 1; grid-row: 2; }
+.btn-abxy.right  { grid-column: 3; grid-row: 2; }
+.btn-abxy.bottom { grid-column: 2; grid-row: 3; }
+
+/* Menu Toggles */
+.system-toggles {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.sys-button {
+    width: 14px;
+    height: 14px;
+    background: #13151a;
+    border-radius: 50%;
+    border: 1px solid #2d323d;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* --- THE CENTER DISPLAY ASSEMBLY --- */
+.console-screen-bezel {
+    position: relative;
+    background: #0d0e12;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: inset 0 4px 12px rgba(0,0,0,0.85);
+    border: 2px solid #20242d;
+}
+
+/* Flag moved safely inside the dark screen assembly wrapper */
+.hc-flag-internal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 55px;
+    z-index: 5;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Branding with Illuminating AI Effect */
+.arcadai-brand {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: #555c70;
+    font-size: 1.15rem;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 14px;
+    text-shadow: 0 -1px 0 #000;
+}
+
+.arcadai-brand .brand-highlight {
+    color: #00ffff;
+    text-shadow: 
+        0 0 6px #00ffff, 
+        0 0 12px rgba(0, 255, 255, 0.8), 
+        0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* THE CRT SCREEN */
+.live-screen {
+    position: relative;
+    background: radial-gradient(circle, #1a132b 0%, #07040d 100%);
+    border-radius: 6px;
+    padding: 55px 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border: 3px solid #050507;
+}
+
+/* CRT Overlay lines */
+.live-screen::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
+    z-index: 2;
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+
+/* Text & Button Interface */
+.pixel-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.glow-text {
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.9), 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.sub-text {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff00ff;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    text-shadow: 0 0 6px rgba(255, 0, 255, 0.6);
+    letter-spacing: 2px;
+}
+
+.start-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 12px 55px;
+    margin-bottom: 30px;
+    box-shadow: 4px 4px 0px #806600, inset -2px -2px 0px #b38f00;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+    transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.start-btn:hover {
+    background-color: #ffe066;
+}
+
+.start-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #806600;
+}
+
+.sponsor-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+    color: #615b7a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
