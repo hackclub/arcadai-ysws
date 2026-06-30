@@ -3019,3 +3019,37 @@ body {
         inset 0 0 45px rgba(0,0,0,.95),
         0 0 18px rgba(0,255,255,.05);
 }
+.deck-screen-viewport {
+    position: absolute;
+
+    /* Move slightly left */
+    left: 20%;
+
+    /* Make it wider */
+    width: 54%;
+
+    /* Move slightly higher */
+    top: 9%;
+
+    /* Make it much taller */
+    height: 80%;
+
+    background: radial-gradient(circle at center, #141226 0%, #050409 100%);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: visible;
+
+    border: 1px solid rgba(255,255,255,.05);
+    box-shadow:
+        inset 0 0 45px rgba(0,0,0,.95),
+        0 0 18px rgba(0,255,255,.05);
+}
