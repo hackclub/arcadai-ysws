@@ -3026,7 +3026,7 @@ body {
     left: 20%;
 
     /* Make it wider */
-    width: 58%;
+    width: 59%;
 
     /* Move slightly higher */
     top: 9%;
@@ -3053,3 +3053,4 @@ body {
         inset 0 0 45px rgba(0,0,0,.95),
         0 0 18px rgba(0,255,255,.05);
 }
+
