@@ -120,13 +120,13 @@
                  style="height: 55px; width: auto; filter: drop-shadow(0 0 10px #E4FF30); animation: floatTrophy 2s ease-in-out infinite alternate; transform: scaleX(-1);">
         </div>
         <p style="font-family: 'DM Sans', sans-serif; font-weight: 900; font-size: 15px; color: #fff; letter-spacing: 1px; margin: 8px 0 0 0;">
-            🔥 THE WINNER GETS SHIPPED WITH AN EXCLUSIVE STICKER! 🔥
+            🔥 SHIPPED WITH AN EXCLUSIVE WINNER STICKER! 🔥
         </p>
     </div>
 
-    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center;">
         
-        <div style="flex: 1; min-width: 320px; max-width: 440px;">
+        <div style="flex: 1; min-width: 320px; max-width: 440px; position: sticky; top: 100px;">
             <div class="cabinet-outer" style="background: #fcd46c; border: 6px solid #000; border-radius: 16px; box-shadow: 12px 12px 0px rgba(0,0,0,0.3); padding: 24px 20px 20px 20px; position: relative;">
                 
                 <div style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: #ff6074; color: white; font-family: 'Press Start 2P'; font-size: 10px; padding: 6px 16px; border: 4px solid #000; box-shadow: 4px 4px 0 #000; white-space: nowrap; z-index: 10;">
@@ -162,7 +162,7 @@
         </div>
 
         <div style="flex: 1.2; min-width: 320px; color: #fff; font-family: 'DM Sans', sans-serif;">
-            <div style="background: rgba(255, 255, 255, 0.03); border: 2px dashed rgba(228, 255, 48, 0.3); border-radius: 12px; padding: 30px;">
+            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(91, 35, 255, 0.2); border-radius: 20px; padding: 36px;">
                 <span style="font-family: 'Press Start 2P'; font-size: 9px; background: rgba(228, 255, 48, 0.15); color: #E4FF30; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px;">
                     USING AI?
                 </span>
@@ -172,9 +172,38 @@
                 <p style="font-size: 15px; line-height: 1.7; color: #ccc; margin-bottom: 25px;">
                     Games can take weeks to build from scratch. And AI is a great tool to learn if used in the right way. So for ArcadeAi, we want to encourage participants to use AI to build the first version of their game, then improve it with their own ideas and creativity. AI helps you learn in this and makes the process a bit faster so you can focus on experimenting, creating, and making something uniquely yours (aka your own first game).
                 </p>
-                <div style="font-family: 'Press Start 2P', monospace; font-size: 11px; line-height: 1.6; color: #E4FF30; border-left: 4px solid #ff6074; padding-left: 15px;">
+                
+                <div style="font-family: 'Press Start 2P', monospace; font-size: 11px; line-height: 1.6; color: #E4FF30; border-left: 4px solid #ff6074; padding-left: 15px; margin-bottom: 35px;">
                     AI Helps you Build the first version.<br>
                     <span style="color: #fff;">You build the final game.</span>
+                </div>
+
+                <div class="ai-grid" style="margin-bottom: 30px;">
+                    <div class="ai-card">
+                        <h3>AI Helps With</h3>
+                        <ul>
+                            <li>Creating a prototype</li>
+                            <li>Writing code</li>
+                            <li>Fixing bugs</li>
+                            <li>Adding features</li>
+                            <li>Explaining concepts</li>
+                        </ul>
+                    </div>
+                    <div class="ai-card">
+                        <h3>You Focus On</h3>
+                        <ul>
+                            <li>Coming up with ideas</li>
+                            <li>Testing your game</li>
+                            <li>Improving the design</li>
+                            <li>Making it fun</li>
+                            <li>Adding personality</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai-footer-note" style="margin-top: 0; text-align: center;">
+                    AI can generate code.<br>
+                    It can't generate your creativity.
                 </div>
             </div>
         </div>
@@ -320,7 +349,7 @@
         gameLoop();
     });
 </script>
-<style>
+        <style>
     @keyframes bounceArrow {
         0% { transform: translateY(-2px); }
         100% { transform: translateY(6px); }
@@ -389,47 +418,6 @@
 </a>
             </div>
         </div>
-
-    <section class="ai-section">
-        <span class="section-tag">Using AI?</span>
-        <h2 class="ai-title">Why Are We Using AI?</h2>
-        <p class="ai-description">
-            Games can take weeks to build from scratch.
-            And AI is great tool to learn if used in the right way. So for ArcadeAi, we want to encourage participants to use AI to build the first version of their game, then improve it with their own ideas and creativity.
-            AI helps you learn in this and makes the process a bit faster so you can focus on
-            experimenting, creating, and making something uniquely yours (aka your own first game).
-        </p>
-        <div class="ai-quote">
-            AI Helps you Build the first version.<br>
-            You build the final game.
-        </div>
-        <div class="ai-grid">
-            <div class="ai-card">
-                <h3>AI Helps With</h3>
-                <ul>
-                    <li>Creating a prototype</li>
-                    <li>Writing code</li>
-                    <li>Fixing bugs</li>
-                    <li>Adding features</li>
-                    <li>Explaining concepts</li>
-                </ul>
-            </div>
-            <div class="ai-card">
-                <h3>You Focus On</h3>
-                <ul>
-                    <li>Coming up with ideas</li>
-                    <li>Testing your game</li>
-                    <li>Improving the design</li>
-                    <li>Making it fun</li>
-                    <li>Adding personality</li>
-                </ul>
-            </div>
-        </div>
-        <div class="ai-footer-note">
-            AI can generate code.<br>
-            It can't generate your creativity.
-        </div>
-    </section>
 
     <section class="arcade-process">
         <div class="process-header">
