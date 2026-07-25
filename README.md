@@ -1,5 +1,3 @@
-The official site of ArcadAi, A YSWS by Hack Club
+The official site of ArcadAI, A YSWS by Hack Club
 
-Maintained by Hridhaan Sahay 
-Mail me: Hi@hridhaan.me
-Slack: @hridhaan
+Sponsored by Jared
